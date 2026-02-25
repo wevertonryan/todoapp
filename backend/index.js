@@ -1,6 +1,6 @@
-import { express } from "express";
-import { cors } from "cors";
-import { routes } from "./routes/route"
+import express from "express";
+import cors from "cors";
+import routes from "./routes/route.js"
 
 const app = new express();
 
@@ -12,4 +12,5 @@ app.use(cors(
 
 app.use("/todoapp/", routes);
 
-app.listen(5000)
+app.listen(5000);
+console.log("To ouvindo");

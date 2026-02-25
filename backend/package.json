@@ -4,7 +4,8 @@
   "description": "Um aplicativo de lista de tarefas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js localhost 5000"
   },
   "type": "module",
   "author": "Weverton Ryan",
