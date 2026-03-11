@@ -7,6 +7,13 @@ const api:AxiosInstance = axios.create({
     }
 })
 
-export const createToDo = (payload:JSON) => api.post("/create", payload)
+export const createToDo = async (payload:String) => 
+    {
+        try {
+            await api.post("/create", payload)
+        } catch(error:any){
+            console.log(error)
+        }
+    }
 
 export default api;

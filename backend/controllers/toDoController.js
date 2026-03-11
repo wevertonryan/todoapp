@@ -7,11 +7,6 @@ function createDocument(content, name="Document") {
     console.log(name + ' created successfully');
 }
 
-export default class ToDoController{
-    static async Create(req, res){
-    }
-}
-
 export async function readTask(req, res){
     const {titulo, descricao, dataLimite, situacao} = req.body;
     if(!titulo, !descricao, !dataLimite, !situacao){

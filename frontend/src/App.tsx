@@ -1,19 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-
-export function MeuComponente(){
-  return (
-    <p>Oi</p>
-  )
-}
+import TodoForm from './pages/todoform'
 
 function App() {
   //const [count, setCount] = useState(0)
 
   return (
     <div>
-      <p>a</p>
-      <MeuComponente />
+      <TodoForm />
     </div>
   )
 }
