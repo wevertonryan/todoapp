@@ -1,26 +1,15 @@
 import ToDo from "../models/toDo.class.js";
-import {Types} from "mongoose";
-import { writeFileSync } from 'node:fs';
 
-function createDocument(content, name="Document") {
-    writeFileSync(`${name}.json`, JSON.stringify(content, null, 2), 'utf8');
-    console.log(name + ' created successfully');
+export async function findTask(req, res){
+
 }
 
-export async function readTask(req, res){
-    const {titulo, descricao, dataLimite, situacao} = req.body;
-    if(!titulo, !descricao, !dataLimite, !situacao){
-        res.status(422).json({message: "Todos os itens são obrigatórios"});
-        return;
-    }
+export async function getAllTasks(req, res){
+    ToDo.find()
 }
 
 export async function createTask(req, res){
     const {titulo, descricao, dataLimite, situacao} = req.body;
-    console.log(typeof(req))
-    console.log(typeof(res))
-    createDocument(req, "Requisicao");
-    createDocument(res, "Resposta");
 
     if(!titulo, !descricao, !dataLimite, !situacao){
         res.status(422).json({message: "Todos os itens são obrigatórios"});

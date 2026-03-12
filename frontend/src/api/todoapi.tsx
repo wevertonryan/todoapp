@@ -7,13 +7,10 @@ const api:AxiosInstance = axios.create({
     }
 })
 
-export const createToDo = async (payload:String) => 
-    {
-        try {
-            await api.post("/create", payload)
-        } catch(error:any){
-            console.log(error)
-        }
-    }
+export const listToDo = () => api.get("/list");
+export const findToDo = (parametros:String) => api.get("/find" + parametros)
+export const createToDo = (payload:String) => api.post("/create", payload);
+export const updateToDo = (payload:String) => api.put("/update", payload);
+export const deleteToDo = (id:String) => api.delete("/delete");
 
 export default api;

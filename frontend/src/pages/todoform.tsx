@@ -25,8 +25,11 @@ export default function TodoForm(){
             }
             const json = JSON.stringify(obj)
             setSaving(true);
-            const result = await createToDo(json);
-            console.log(result);
+            try {
+                await createToDo(json);
+            } catch (error) {
+                console.log(error)
+            }
             setSaving(false)
         }
         return
